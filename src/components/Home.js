@@ -7,7 +7,7 @@ const Home = ({ chartOption }) => (
       option={chartOption}
       notMerge={true}
       lazyUpdate={true}
-      style={{height: '300px', width: '700px'}}
+      style={{ width: '100vw' }}
     />
   </div>
 );

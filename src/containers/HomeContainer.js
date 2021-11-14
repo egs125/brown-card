@@ -25,7 +25,7 @@ const HomeContainer = () => {
     series: [
       {
         type: 'pie',
-        radius: '50%',
+        radius: '40%',
         width: '100%',
         height: '100%',
         data: [],
