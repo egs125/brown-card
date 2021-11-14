@@ -17,7 +17,6 @@ const HomeContainer = () => {
   const defaultOption = {
     tooltip: {
       trigger: 'item',
-      formatter: '{b}: {c}원'
     },
     legend: {
       show: true,
@@ -30,6 +29,16 @@ const HomeContainer = () => {
         width: '100%',
         height: '100%',
         data: [],
+        label: {
+          formatter: params => {
+            const { name, percent, value } = params;
+            return `{title|${name}: ${percent}%}\n{amount|${cm.addComma(value)}원}`
+          },
+          rich: {
+            title: { fontWeight: 'bold', fontSize: 14 },
+            ammount: { color: '#999' },
+          },
+        },
       }
     ]
   };
